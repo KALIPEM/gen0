@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&display=swap');
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "../styles/buttons.css";
+@import "../styles/helper.css";
+@import "../styles/header.css";
+@import "../styles/nav.css";
+@import "../styles/slider.css";
+@import "../styles/footer.css";
+
+
+body{
+    @apply text-base leading-[1.6] font-barlow text-black;
+}
+
+img{
+    @apply w-full block;
+}
+
+ul{
+    @apply list-none;
+}
+
+/* popular section */
+.sc-popular{
+    @apply bg-violet-dark-active;
+}
+
+.game-card{
+    @apply flex flex-col;
+}
+
+.game-card .game-card-top{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.27) 92.08%);
+    @apply h-[280px] overflow-hidden relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-gradient-to-b after:from-black/0 after:to-black/100;
+}
+
+.game-card .star-rating{
+    @apply flex;
+}
+
+.game-card .star-rating img{
+    @apply py-0 px-[2px];
+}
+
+.game-card .ratings-count{
+    @apply absolute left-[18px] bottom-[10px] font-bold text-[14px] py-[2px] px-3 rounded-2xl bg-white z-10 flex;
+}
+
+.game-card .game-card-bottom{
+    @apply flex-1 bg-violet-light py-5 px-[18px];
+}
+
+.game-card .game-card-title{
+    @apply text-[18px] font-extrabold font-poppins tracking-[.06em] mb-[10px];
+}
+
+.game-card .details-group{
+    @apply pt-3 text-white/60 text-[14px];
+}
+
+/* join section */
+.sc-join{
+    @apply min-h-[640px];
+}
+
+.join-content{
+    @apply text-white mx-auto text-center max-w-[600px];
+}
+
+.join-title{
+    text-shadow: 0px 4px 4px 0x #00000040;
+    @apply text-[44px] tracking-[.09em] font-bold;
+}
+
+.join-title span{
+    @apply text-green-normal font-right;
+}
+
+/* posts section */
+.game-post-body{
+    @apply bg-violet-dark-hover text-white;
+}
+
+.game-post-title{
+    @apply font-bold text-[20px] tracking-wide text-white;
+}
+
+.game-post-body .para-text{
+    @apply text-white text-base leading-[1.4] mt-5 mb-6;
+}
+
+.game-post-body .btn-secondary{
+    @apply mt-0;
+}
+
+/* category section */
+.sc-category{
+    background: linear-gradient(180deg, rgba(12, 10, 36, 0.73) 0%, rgba(0, 0, 0, 0.73) 72.92%), url("../assets/images/category_image.png") center/cover no-repeat;
+}
+
+.sc-category .sc-title span{
+    @apply text-green-normal;
+}
+
+.sc-category .button-group button{
+    @apply border-[1px] border-solid border-white py-2 px-[18px] text-white text-[18px] tracking-[.08em] font-medium uppercase lg:mx-[6px];
+}
+
+.active-filter-button{
+    @apply bg-green-normal;
+}
+
+.category-item{
+    @apply h-[370px] relative after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full overflow-hidden hidden;
+}
+
+.category-item::after{
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.92) 100%);
+}
+
+.category-item-info{
+    @apply absolute left-4 right-4 bottom-0 mb-6 border-solid border-b-[1px] border-white z-10;
+}
+
+/* stores section */
+.sc-stores .sc-title span{
+    @apply text-green-normal;
+}
+
+.store-item{
+    @apply grid grid-cols-[2fr_3fr];
+}
+
+.store-item-info{
+    @apply bg-white flex flex-col items-start justify-center px-4 py-7 hover:bg-green-normal;
+}
+
