@@ -882,6 +882,7 @@ video {
 .text-green-normal{
   --tw-text-opacity: 1;
   color: rgb(0 159 157 / var(--tw-text-opacity));
+  font-size: 40px;
 }
 
 .text-violet-darker{
