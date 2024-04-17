@@ -1139,11 +1139,20 @@ video {
 /* header */
 
 .header{
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.32)), linear-gradient(248.75deg, rgba(0, 159, 157, 0.41) 0%, rgba(15, 10, 60, 0.41) 38.46%), url("../assets/images/banner-img-space.jpg") center/cover no-repeat;
+  background: rgba(0, 0, 0, 0);
   display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: flex-start;
+}
+
+.header video{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 120%;
+  height: auto;
 }
 
 .header .lead-text{
