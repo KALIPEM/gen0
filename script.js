@@ -86,7 +86,15 @@ $(document).ready(function(){
     })
 });
 
-const video = document.getElementById('hero-video');
+let videoId;
+
+if (window.innerWidth > 420) {
+  videoId = 'hero-video';
+} else {
+  videoId = 'hero-video-mb';
+}
+
+const video = document.getElementById(videoId);
 let loopCount = 0;
 const maxLoopCount = 3; // Define the maximum number of loops
 
