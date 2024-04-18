@@ -86,32 +86,45 @@ $(document).ready(function(){
     })
 });
 
-// Get video element
 const video = document.getElementById('hero-video');
-
-// Track start time
-let startTime;
 let loopCount = 0;
-video.addEventListener('play', () => {
-  startTime = performance.now(); 
-});
+const maxLoopCount = 3; // Define the maximum number of loops
 
-video.addEventListener('timeupdate', () => {
+function loopVideo() {
+  console.log('Starting new loop');
+  const startTime = performance.now();
 
-  // Get elapsed time since start
-  const elapsed = performance.now() - startTime;
+  video.currentTime = 0;
+  video.play();
 
-  // Check if elapsed time exceeds 15 seconds 
-  if (elapsed >= 15000 && loopCount < 2) {
-    video.pause();
-  }
+  video.addEventListener('timeupdate', function onTimeUpdate() {
+    const elapsed = performance.now() - startTime;
 
-});
+    console.log('Elapsed time:', elapsed);
+
+    if (elapsed >= 15000) {
+      console.log('Reached 15 seconds, pausing');
+      video.pause();
+      video.removeEventListener('timeupdate', onTimeUpdate);
+
+      loopCount++;
+      if (loopCount < maxLoopCount) {
+        console.log('Looping again...');
+        loopVideo();
+      } else {
+        console.log('Maximum loop count reached, stopping loop');
+      }
+    }
+  });
+}
 
 video.addEventListener('ended', () => {
-  // Reset start time and restart video
-  startTime = performance.now();
-  video.currentTime = 0;
-  loopCount++;
-  video.play();
+  console.log('Video ended');
 });
+
+video.addEventListener('error', (err) => {
+  console.error('Error!', err);
+});
+
+loopVideo();
+
