@@ -13,6 +13,12 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- custom css (tailwind) -->
         <link rel="stylesheet" href="dist/main.css">
+        <style>
+            @font-face {
+                font-family: "glitchy";
+                src: url("assets/font/Jersey10-Regular.ttf");
+            }
+        </style>
     </head>
     <body>
     
@@ -393,7 +399,7 @@
             </div>
         </section>
 
-        <section class = "py-16 sc-posts bg-violet-dark-active">
+        <section class = "py-16 sc-posts bg-violet-dark-active" style="display: none;">
             <div class = "container">
                 <div class = "sc-title">
                     <h3>latest <span>posts</span></h3>
@@ -570,7 +576,7 @@
             </div>
         </section>
 
-        <section class = "py-16 sc-category">
+        <section class = "py-16 sc-category" style="display: none;">
             <div class = "container">
                 <div class = "sc-title">
                     <h3>game <span>category</span></h3>
@@ -769,14 +775,14 @@
             </div>
         </section>
 
-        <section class = "py-16 sc-stores bg-violet-darker">
+        <section class = "py-16 sc-stores bg-black-darker about-section">
             <div class = "container">
-                <div class = "sc-title">
-                    <h3>game <span>store</span></h3>
+                <div class = "sc-title" style="display: none;">
+                    <h3>ABOUT <span></span></h3>
                     <div class = "line"></div>
                 </div>
 
-                <div class = "mt-16 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+                <div class = "mt-16 grid gap-6 sm:grid-cols-2 md:grid-cols-3" style="display: none;">
                     <div class = "store-item group">
                         <div class = "store-item-img img-fit-cover">
                             <img src = "assets/images/store-1.png" alt = "" />
@@ -889,6 +895,22 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div>
+                <div class="aboutus">
+                    <div class="mainq">
+                        <h3 class="h3">What is <br><span>prompt engineering ?</span></h3>
+                        <p><span>Prompt Engineering</span>, in this aspect, is the systematic utilization of tools to efficiently achieve tasks or goals, optimizing workflows for maximum effectiveness. When it comes to AI and ML, <span>Prompt Engineering</span> is the process of designing and refining prompts or stimuli in the context of natural language processing (NLP) tasks.</p>
+                    </div>
+                    <div class="about-content">
+                        <div class="ab-content-1">
+                            <img src="assets/images/Default_A_group_of_educated_Indian_people_among_which_there_a_1.jpg" alt="two guys talking">
+                            <div class="text-content">
+                                <h3>About <span>Us</span></h3>
+                                <p>We are prompt engineers — think of us as your go-to team for all things tech. From web development to app design, branding, and SEO, we've got the skills to make it happen, fast. Our secret sauce? It's all about optimizing workflows and delivering top-notch results with lightning speed. We're not just a team; we're a crew of digital wizards, ready to transform your ideas into reality. So, if you're ready to take your online presence to the next level, join us for an epic journey!</p>
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
