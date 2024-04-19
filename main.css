@@ -2309,3 +2309,34 @@ ul{
   background-color: rgb(0, 0, 0, 1);
   box-shadow: 10px 10px 1px rgba(13,6,113,255);
 }
+
+@media (max-width: 400px) {
+  .ab-content-1{
+    flex-direction: column;
+    width: 340px;
+  }
+  .ab-content-1 .text-content{
+    padding: 5px;
+    margin-right: 0;
+    margin-left: -15px;
+    font-size: ;
+  }
+  .ab-content-1 .text-content h3 span{
+    
+  }
+  .ab-content-1 .text-content h3{
+    
+  }
+  .ab-content-1 .text-content p{
+    
+  }
+}
+@media (max-width: 500px) {
+  
+}
+@media (max-width: 600px) {
+  
+}
+@media (max-width: 700px) {
+  
+}
