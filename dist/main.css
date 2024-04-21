@@ -2357,7 +2357,7 @@ ul{
   background-color: rgb(0, 0, 0);
   color: white;
   cursor: pointer;
-  box-shadow: -5px 5px 1px rgba(13,6,113,255);
+  box-shadow: -10px 10px 1px rgba(13,6,113,255);
   transition: 1s;
 }
 
