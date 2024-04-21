@@ -2407,6 +2407,7 @@ footer{
   cursor: pointer;
   right: 14px;
   bottom: 16px;
+  background: radial-gradient(circle, rgba(0, 159, 157, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
 
 .scrollup .up{
