@@ -136,3 +136,44 @@ video.addEventListener('error', (err) => {
 
 loopVideo();
 
+
+// scroll up button js code
+
+document.getElementById('scrollUpBtn').addEventListener('click', function() {
+    scrollToTop(1000); // Adjust the duration as needed
+});
+
+function scrollToTop(duration) {
+    var start = window.pageYOffset;
+    var startTime = 'now' in window.performance ? performance.now() : new Date().getTime();
+
+    function scrollStep() {
+        var now = 'now' in window.performance ? performance.now() : new Date().getTime();
+        var timeElapsed = now - startTime;
+        var easeInOutCubic = function (t) { return t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1; };
+
+        window.scrollTo(0, start - start * easeInOutCubic(timeElapsed / duration));
+
+        if (timeElapsed < duration) {
+            requestAnimationFrame(scrollStep);
+        } else {
+            window.scrollTo(0, 0);
+        }
+    }
+
+    requestAnimationFrame(scrollStep);
+}
+
+// scroll button dissappear when the page is at the top:
+
+window.addEventListener('scroll', function() {
+    var scrollUpBtn = document.getElementById('scrollUpBtn');
+    if (window.scrollY > window.innerHeight * 0.3) {
+        scrollUpBtn.style.opacity = '1';
+        scrollUpBtn.style.display = 'block';
+        scrollUpBtn.style.pointerEvents = 'auto'; // Re-enable pointer events
+    } else {
+        scrollUpBtn.style.opacity = '0';
+        scrollUpBtn.style.pointerEvents = 'none'; // Disable pointer events to prevent clicking while invisible
+    }
+});

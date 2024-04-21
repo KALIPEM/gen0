@@ -2386,6 +2386,45 @@ footer{
   text-align: center;
 }
 
+.scrollup{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: fixed;
+  background-color: rgb(0 159 157);
+  z-index: 9999;
+  right: 10px;
+  bottom: 20px;
+  box-shadow: -10px 10px 5px rgba(100,200,213,255);
+  text-align: center;
+  display: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scrollup:hover{
+  box-shadow: -4px 4px 1px rgba(100,200,213,255);
+  transition: 1s;
+  cursor: pointer;
+  right: 14px;
+  bottom: 16px;
+}
+
+.scrollup .up{
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.scrollup .arrow{
+  color: white;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  position: absolute;
+  right: 16px;
+  bottom: -2px;
+  font-size: 30px;
+  font-weight: 900;
+}
+
 @media (max-width: 400px) {
   .ab-content-1{
     flex-direction: column;
