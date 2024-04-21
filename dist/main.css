@@ -2462,14 +2462,14 @@ footer{
 @media (max-width: 500px) {
   .ab-content-1{
     flex-direction: column;
-    width: 340px;
+    width: 400px;
   }
   .ab-content-1 .text-content{
     padding: 5px;
     order: 1;
     margin-right: 0;
     margin-left: 0px;
-    width: 320px;
+    width: 380px;
     height: auto;
   }
   .ab-content-2 img{
@@ -2481,14 +2481,14 @@ footer{
 
   .ab-content-2{
     flex-direction: column;
-    width: 340px;
+    width: 400px;
   }
   .ab-content-2 .text-content{
     padding: 5px;
     order: 1;
     margin-right: 0;
     margin-left: 0px;
-    width: 320px;
+    width: 380px;
     height: auto;
   }
 }
