@@ -2491,6 +2491,17 @@ footer{
     width: 380px;
     height: auto;
   }
+  .banner-content #hero-video{
+    display: none;
+   }
+   .banner-content #hero-video-mb{
+    display: block;
+    height: auto;
+    width: 100%;
+   }
+   .banner-content{
+    margin-top: 70px;
+   }
 }
 @media (max-width: 600px) {
   
