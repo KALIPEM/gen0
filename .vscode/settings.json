@@ -1,3 +1,4 @@
 {
-    "docwriter.style": "XML"
+    "docwriter.style": "XML",
+    "liveServer.settings.port": 5501
 }
